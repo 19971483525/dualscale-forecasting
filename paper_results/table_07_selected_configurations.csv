@@ -1,0 +1,8 @@
+model,learning_rate,dropout,parameters
+PatchTST,0.001,0.04,77445
+TSMixer,0.0002,0.1,38514
+TimesNet,0.001,0.04,1352982
+iTransformer,0.001,0.04,79845
+TimeMixer,0.001,0.04,141438
+TimeXer,0.001,0.04,133413
+Ours,0.001,0.04,591209

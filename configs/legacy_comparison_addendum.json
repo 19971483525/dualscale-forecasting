@@ -1,0 +1,122 @@
+{
+  "stage": "FROZEN",
+  "created": "2026-11-20T11:35:38.782604+00:00",
+  "authorization": "User requested retaining old local implementations because official code is unavailable.",
+  "scope": "Disclosed legacy local controls, not authenticated reproductions of the named papers.",
+  "base_protocol_sha256": "29471f6b89322c596c0ea1c821a2553375a57960c979c65406ac9430d784e2a0",
+  "source_sha256": {
+    "src/hubei_revision/legacy_local/baselines.py": "c461a7cb4abcb52c25329804727de04df2f9273e2a5fe10b7944133fd1789175",
+    "src/hubei_revision/legacy_local/model.py": "67018a7ae379672489925789d42fbb82e853e99a3e8517707ea1de7fbe0504df",
+    "src/hubei_revision/legacy_factory.py": "fe28f9a886e785348755bd5bca0281adfe4af5564ea880866861f1b280b7b748"
+  },
+  "architectures": {
+    "MG-ASTL": {
+      "hidden_dim": 80,
+      "dropout": 0.0,
+      "depth": 1,
+      "description": "Old ConvInception backbone; no graph or multitask decomposition."
+    },
+    "TL-STLF": {
+      "hidden_dim": 80,
+      "dropout": 0.1,
+      "depth": 2,
+      "description": "Old Mixer backbone; no source-domain transfer stage."
+    },
+    "LoadFormer": {
+      "hidden_dim": 80,
+      "dropout": 0.1,
+      "depth": 2,
+      "patch_len": 7,
+      "description": "Old two-layer patch Transformer; no verified LoadFormer-specific block."
+    },
+    "STGNN-Load": {
+      "hidden_dim": 80,
+      "dropout": 0.1,
+      "depth": 2,
+      "description": "Old inverted variable Transformer; not a verified spatiotemporal graph network."
+    },
+    "ASTGCN-Load": {
+      "hidden_dim": 96,
+      "dropout": 0.0,
+      "depth": 1,
+      "description": "Old ConvInception backbone; separate from the sourced ASTGCN-r adapter."
+    },
+    "GAT-LoadMixer": {
+      "hidden_dim": 72,
+      "dropout": 0.1,
+      "depth": 3,
+      "description": "Old Mixer backbone; no graph-attention layer."
+    }
+  },
+  "learning_rates": [
+    0.0005,
+    0.001,
+    0.0002
+  ],
+  "seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    3407
+  ],
+  "rolling_method": "TL-STLF",
+  "rolling_folds": {
+    "summer": {
+      "train": [
+        "2024-02-12",
+        "2024-05-31"
+      ],
+      "val": [
+        "2024-06-01",
+        "2024-06-30"
+      ],
+      "test": [
+        "2024-07-01",
+        "2024-07-30"
+      ]
+    },
+    "autumn": {
+      "train": [
+        "2024-02-12",
+        "2024-08-31"
+      ],
+      "val": [
+        "2024-09-01",
+        "2024-09-30"
+      ],
+      "test": [
+        "2024-10-01",
+        "2024-10-30"
+      ]
+    },
+    "winter": {
+      "train": [
+        "2024-02-12",
+        "2024-10-31"
+      ],
+      "val": [
+        "2024-11-01",
+        "2024-11-30"
+      ],
+      "test": [
+        "2024-12-01",
+        "2024-12-30"
+      ]
+    },
+    "spring": {
+      "train": [
+        "2024-02-12",
+        "2025-01-31"
+      ],
+      "val": [
+        "2025-02-01",
+        "2025-02-28"
+      ],
+      "test": [
+        "2025-03-01",
+        "2025-03-30"
+      ]
+    }
+  }
+}

@@ -1,0 +1,760 @@
+{
+  "release_date": "2026-11-23",
+  "repository": "19971483525/dualscale-forecasting",
+  "manuscript_title": "Cross-Guided Dual-Scale Learning with a Dynamic Industry Graph for Next-Day Electricity Consumption Forecasting",
+  "manuscript_sha256": "e4777996fe731ff7a5056d13b02b8d2314978682ddf10233c61606e187e77a05",
+  "source_archive_sha256": "887c11f6d95217ea8b8142707588065d299fe7f8d1bea4e4cf85bef9d2be7067",
+  "protocol_sha256": "29471f6b89322c596c0ea1c821a2553375a57960c979c65406ac9430d784e2a0",
+  "numerical_source_unchanged": true,
+  "matched_table_rows": 91,
+  "tables": [
+    {
+      "table": 5,
+      "file": "table_05_history_window_validation.csv",
+      "rows": 7,
+      "scope": "Validation only; five seeds; fixed learning rate 0.0005."
+    },
+    {
+      "table": 6,
+      "file": "table_06_general_forecasting.csv",
+      "rows": 7,
+      "scope": "Test; all five training seeds; sample SD."
+    },
+    {
+      "table": 7,
+      "file": "table_07_selected_configurations.csv",
+      "rows": 7,
+      "scope": "Selected configurations; hidden width 96 for these models."
+    },
+    {
+      "table": 8,
+      "file": "table_08_local_deep_learning.csv",
+      "rows": 7,
+      "scope": "Test; five seeds; local labels do not authenticate named-paper reproduction."
+    },
+    {
+      "table": 9,
+      "file": "table_09_statistical_machine_learning.csv",
+      "rows": 9,
+      "scope": "Test; Ours is the five-seed mean; other rows are individual baseline evaluations."
+    },
+    {
+      "table": 10,
+      "file": "table_10_module_ablation.csv",
+      "rows": 10,
+      "scope": "Test; matched seeds 42, 123, 3407; sample SD."
+    },
+    {
+      "table": 11,
+      "file": "table_11_fusion_strategies.csv",
+      "rows": 9,
+      "scope": "Test; all five seeds; complete registered parameter counts."
+    },
+    {
+      "table": 12,
+      "file": "table_12_graph_topk.csv",
+      "rows": 6,
+      "scope": "Validation and test are labeled separately; three matched seeds; density includes diagonals."
+    },
+    {
+      "table": 13,
+      "file": "table_13_graph_relation_controls.csv",
+      "rows": 6,
+      "scope": "Test; three matched seeds; actual parameter counts, not asserted exact matches."
+    },
+    {
+      "table": 14,
+      "file": "table_14_graph_operating_conditions.csv",
+      "rows": 7,
+      "scope": "Test; matched three seeds; date subsets overlap where applicable; small subsets are descriptive."
+    },
+    {
+      "table": 15,
+      "file": "table_15_seasonal_forecasting.csv",
+      "rows": 3,
+      "scope": "Four 30-day next-day forecast windows; five seeds per model and fold; sample SD."
+    },
+    {
+      "table": 16,
+      "file": "table_16_input_noise_robustness.csv",
+      "rows": 13,
+      "scope": "Fixed model seed 42; metrics averaged over three perturbation seeds, not training seeds."
+    }
+  ],
+  "excluded": [
+    "Original and prepared observations",
+    "Dated true/predicted values",
+    "Weights and fitted models",
+    "Manuscript PDF",
+    "Figures",
+    "Private reports and local paths",
+    "Credentials"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "bef730a5b66d3ab6e31e9d4003e93ca7a7e415e0ee38fc667ce2bff37935562c",
+      "bytes": 80
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "3be9bc944e82831c73c756bbd868d53f484710f7d7a308f058bef0b38c4f9375",
+      "bytes": 513
+    },
+    {
+      "path": "configs/frozen_protocol_receipt.json",
+      "sha256": "88f1ace88ee40cd48451c1eca7b6aa50500175957ca05bb62dfdf8134c36e123",
+      "bytes": 247
+    },
+    {
+      "path": "configs/legacy_comparison_addendum.json",
+      "sha256": "f98507d7278fb76fce32c0749a30e348d70f838a1fd02b5b7d877a20b66ead69",
+      "bytes": 3073
+    },
+    {
+      "path": "configs/unified_protocol.json",
+      "sha256": "29471f6b89322c596c0ea1c821a2553375a57960c979c65406ac9430d784e2a0",
+      "bytes": 4000
+    },
+    {
+      "path": "data_private/README.md",
+      "sha256": "cc3f9336e08239369abc70a5942d2e7dfa00797162ce3b207a1947f23e6dbf76",
+      "bytes": 433
+    },
+    {
+      "path": "docs/FEATURE_SCHEMA.md",
+      "sha256": "437f24424ee6b0a7a5762295653c8857008905975f7e0aace6bffa17cf0ecdd1",
+      "bytes": 3167
+    },
+    {
+      "path": "docs/MODEL_PROVENANCE.md",
+      "sha256": "eb0fd2c0289125a2cc302cd6a4eeb46985f1daf0069aee5128462281863b8770",
+      "bytes": 2260
+    },
+    {
+      "path": "docs/PAPER_RESULTS_MAP.md",
+      "sha256": "09ef8135b0ceab217b03986c57790ab842728ecf3c826e6b9e5437532fbb62a5",
+      "bytes": 2654
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "sha256": "59fb9b893ae02f09c234eda12553495ceccaa80f544b18084be834bb733383b8",
+      "bytes": 2884
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "82ca1d1d771b693090d7de79f4ed3c2f93c05407d6094d13e949702d5a9bf4e6",
+      "bytes": 394
+    },
+    {
+      "path": "paper_results/README.md",
+      "sha256": "7e38bcf6da9ff02c0ec588a1d723657eee8adce55d692ba275b9feba8d9b026c",
+      "bytes": 552
+    },
+    {
+      "path": "paper_results/table_05_history_window_validation.csv",
+      "sha256": "1fd8eb0b4c05e87e023f1f15e01c3d6e8371afb1dbed65a0a7add26fb0bfdcb9",
+      "bytes": 271
+    },
+    {
+      "path": "paper_results/table_06_general_forecasting.csv",
+      "sha256": "6911fb28ccf452e8af680a152d2a0b494b8ccbd56b7e8317e1d810464b2befff",
+      "bytes": 418
+    },
+    {
+      "path": "paper_results/table_07_selected_configurations.csv",
+      "sha256": "fa86d2d2e167984864beafbb6ea6a97da867e964ec1902fd25dfd0a75dd022f7",
+      "bytes": 233
+    },
+    {
+      "path": "paper_results/table_08_local_deep_learning.csv",
+      "sha256": "3606429330536cd57257384eedba66e696bb37efb7ac8dbedb10caaf6cc8870b",
+      "bytes": 467
+    },
+    {
+      "path": "paper_results/table_09_statistical_machine_learning.csv",
+      "sha256": "1e8032996c06cf94ff05c3adbb2391eec004383583cd354b8ab92ccc2a0d5e0e",
+      "bytes": 347
+    },
+    {
+      "path": "paper_results/table_10_module_ablation.csv",
+      "sha256": "979f852bb3e93ebb3d6431115f500aa939a2b0a05f55e14e8aef05fb95c616e1",
+      "bytes": 594
+    },
+    {
+      "path": "paper_results/table_11_fusion_strategies.csv",
+      "sha256": "21ca515ebe7487a05ca6d5a71bda1dc99fab7b187af4a14fa50af37bff7a3d39",
+      "bytes": 537
+    },
+    {
+      "path": "paper_results/table_12_graph_topk.csv",
+      "sha256": "8098e7d0fdc5376eb451854524382f52d21ff2bc9c53dbf2ea62f956618f3c42",
+      "bytes": 392
+    },
+    {
+      "path": "paper_results/table_13_graph_relation_controls.csv",
+      "sha256": "9bbf26454e7070afc3174048c8ec5285301624e3b5e890f715f850e84f85c91d",
+      "bytes": 370
+    },
+    {
+      "path": "paper_results/table_14_graph_operating_conditions.csv",
+      "sha256": "bb1034f24ceefe24ee59e7f8d1aa96742f9fef989c5e2f8e5feb48876927673d",
+      "bytes": 412
+    },
+    {
+      "path": "paper_results/table_15_seasonal_forecasting.csv",
+      "sha256": "2d5897c4c29412abbcbbd627f1eb2f32a3a4bef73d940570f929b5136fa1f825",
+      "bytes": 345
+    },
+    {
+      "path": "paper_results/table_16_input_noise_robustness.csv",
+      "sha256": "a83132df4246f8f2bab3e03c8eec0e52e3d00d309bc0b93c9040924d1ad049fe",
+      "bytes": 524
+    },
+    {
+      "path": "README.md",
+      "sha256": "63cb4cc64d9792ec02a361e74b7d18c2010be380ce3b9e48674b913f1fcf0c31",
+      "bytes": 4834
+    },
+    {
+      "path": "README_CN.md",
+      "sha256": "454399a7d9771c480339e625847154d493e45f62cfa07ddd5d21c973dc099096",
+      "bytes": 1219
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "154fca1734ada53015ee6e66d295fe27ef964de0b3bcb8e6f9df14d821d4ff19",
+      "bytes": 218
+    },
+    {
+      "path": "scripts/export_paper_results.py",
+      "sha256": "471d416def1bb08f28d49147e72c37d24111988dc021cfc060fd08a9d34400fc",
+      "bytes": 8256
+    },
+    {
+      "path": "scripts/run_analysis.py",
+      "sha256": "7c5c3e9a01a652d5b635a3561a1fc3a54657f143a001d4c5fbe4f1175ed7e4bf",
+      "bytes": 297
+    },
+    {
+      "path": "scripts/run_history_controls.py",
+      "sha256": "abc74939419a708159bd56f278ed0211b061ebefcdded287d8363e7eb798f89b",
+      "bytes": 8142
+    },
+    {
+      "path": "scripts/run_legacy_addendum.py",
+      "sha256": "3b7e9cbabc610164618d2d03c7bb48ffab00130ba7dfee769985212495ed869a",
+      "bytes": 6157
+    },
+    {
+      "path": "scripts/run_suite.py",
+      "sha256": "58e787c3999324506269acbabf90bc4899cf33d6b756c34c2014993ecb54f151",
+      "bytes": 493
+    },
+    {
+      "path": "scripts/setup_reference_sources.py",
+      "sha256": "aca6e43f6bc196eb6d135e0b81799ec66a895acad1bba1b24e1b94e04167ee34",
+      "bytes": 1867
+    },
+    {
+      "path": "scripts/show_progress.py",
+      "sha256": "96f63561cca4b12aec03abc257f337e128d709be9e366da8983e39dd26a5c089",
+      "bytes": 1430
+    },
+    {
+      "path": "scripts/smoke_and_audit.py",
+      "sha256": "b4972706ac6667b97c8469f46002366e48a369164cd086a682f2665f6c93f8ea",
+      "bytes": 4653
+    },
+    {
+      "path": "scripts/summarize_results.py",
+      "sha256": "75fe917734797a030b2b52da0c8168ef0dcf90a4dc8ea2417d596d06f94a7ea9",
+      "bytes": 380
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "sha256": "a094b43328593d1cc3f9c152cc030e3bd9b478216efdcae8256e0b05990e64d1",
+      "bytes": 1105
+    },
+    {
+      "path": "src/hubei_revision/__init__.py",
+      "sha256": "6bef795cbb4c353dd4aceb19fc421301b91ed5b3f552b027738745441cff2ac8",
+      "bytes": 421
+    },
+    {
+      "path": "src/hubei_revision/analyses.py",
+      "sha256": "f050fbf3c395152a0df141de01a9dca8f3cdea9880ee36db3be572c0b2a1ef5f",
+      "bytes": 23234
+    },
+    {
+      "path": "src/hubei_revision/common.py",
+      "sha256": "208283d52060122e92234157870c11f323d6cec7625c5fbddffde03644131c28",
+      "bytes": 544
+    },
+    {
+      "path": "src/hubei_revision/engine.py",
+      "sha256": "1b5308cb45a64a62f50b114d3632a14b3706a06a8ad2caa9cf2e4fdd764f8efd",
+      "bytes": 15507
+    },
+    {
+      "path": "src/hubei_revision/figures.py",
+      "sha256": "ba3d11c04ff467d0cc7abf1c4f0bbeb81c8be6add01c0e9a0e64f137bb3ad955",
+      "bytes": 23105
+    },
+    {
+      "path": "src/hubei_revision/legacy/__init__.py",
+      "sha256": "5d09edd22153934ec836cc5933deb6da831516d39dd90d7d50faa0df81e9e476",
+      "bytes": 282
+    },
+    {
+      "path": "src/hubei_revision/legacy/data.py",
+      "sha256": "f3cbd75feb91ff2f182c4eeaac7e4d82af8e7923282a3132637e95ddafdb63a0",
+      "bytes": 9704
+    },
+    {
+      "path": "src/hubei_revision/legacy/model.py",
+      "sha256": "ead817f287c584585c2342cd2eefb2015ae61dff84350acf7f94bb2009c939b3",
+      "bytes": 19266
+    },
+    {
+      "path": "src/hubei_revision/legacy/trainer.py",
+      "sha256": "b078ba9691a5f6414233d4f0f2982767e4a56b6ec397623c3b103901b3346d80",
+      "bytes": 10927
+    },
+    {
+      "path": "src/hubei_revision/legacy_analysis.py",
+      "sha256": "8554dfd1d181d4195c9d377f3888c03eff4e701738e5953d46535952c127e562",
+      "bytes": 4877
+    },
+    {
+      "path": "src/hubei_revision/legacy_factory.py",
+      "sha256": "fe28f9a886e785348755bd5bca0281adfe4af5564ea880866861f1b280b7b748",
+      "bytes": 1115
+    },
+    {
+      "path": "src/hubei_revision/legacy_local/__init__.py",
+      "sha256": "b7be917917b1aa3496e45fca4b39141ac30f814dcfe10a095c72328f0022e10e",
+      "bytes": 83
+    },
+    {
+      "path": "src/hubei_revision/legacy_local/baselines.py",
+      "sha256": "c461a7cb4abcb52c25329804727de04df2f9273e2a5fe10b7944133fd1789175",
+      "bytes": 5397
+    },
+    {
+      "path": "src/hubei_revision/legacy_local/model.py",
+      "sha256": "67018a7ae379672489925789d42fbb82e853e99a3e8517707ea1de7fbe0504df",
+      "bytes": 108
+    },
+    {
+      "path": "src/hubei_revision/models.py",
+      "sha256": "b315a5c482c0ca860e075574998b5e0f53fac0d6ca34025051453162993606fa",
+      "bytes": 9369
+    },
+    {
+      "path": "src/hubei_revision/reporting.py",
+      "sha256": "84e9bdaa8d5daf0326ff02f236d5e98679cdd83f478dc318c969929bccd77e02",
+      "bytes": 14364
+    },
+    {
+      "path": "src/hubei_revision/suite.py",
+      "sha256": "886e1ff780f52d8e60394d6393ab3979a64e7fba4ecfcbcd9f3eab35ad6fef3c",
+      "bytes": 6656
+    },
+    {
+      "path": "src/hubei_revision/traditional.py",
+      "sha256": "27deb694a6d39fe1cc9fa526d33d29a780de9ad9385f03926e0606f6aa9a9763",
+      "bytes": 7824
+    },
+    {
+      "path": "src/hubei_revision/units.py",
+      "sha256": "27bdf6b81468c51c3c34f849c8ac0de45203998f36091f3cfa04ca67c4c0467d",
+      "bytes": 1243
+    },
+    {
+      "path": "src/hubei_revision/window_trainer.py",
+      "sha256": "b078ba9691a5f6414233d4f0f2982767e4a56b6ec397623c3b103901b3346d80",
+      "bytes": 10927
+    },
+    {
+      "path": "vendor/tslib/layers/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "vendor/tslib/layers/AutoCorrelation.py",
+      "sha256": "354b44e54bdd39380c9f5c2bfaaf3b967fdbe80dc7998741dbfdfa5d521a040c",
+      "bytes": 6462
+    },
+    {
+      "path": "vendor/tslib/layers/Autoformer_EncDec.py",
+      "sha256": "48745b4bb647355e9845792a855df9c59fd7df7fcc664c765351fec390c4073e",
+      "bytes": 6831
+    },
+    {
+      "path": "vendor/tslib/layers/Conv_Blocks.py",
+      "sha256": "16d9f2d9e4fa094dc357901e32beecda9839709bcca02625e6447186933ce4e1",
+      "bytes": 2376
+    },
+    {
+      "path": "vendor/tslib/layers/Crossformer_EncDec.py",
+      "sha256": "ee2cc5c8d3a44f4de67ce986e6b442488826a20fa4d8f87991941a75587936a1",
+      "bytes": 4333
+    },
+    {
+      "path": "vendor/tslib/layers/DWT_Decomposition.py",
+      "sha256": "422af1eec77df1b9dcfdea3d457e545c8575da69da4f505f27ba54db0c9f7764",
+      "bytes": 46759
+    },
+    {
+      "path": "vendor/tslib/layers/Embed.py",
+      "sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "bytes": 7012
+    },
+    {
+      "path": "vendor/tslib/layers/ETSformer_EncDec.py",
+      "sha256": "4ba2a0b76381602e32341fcc1a6a74ca86d2347905589fb34a74f8e54d7023e3",
+      "bytes": 11433
+    },
+    {
+      "path": "vendor/tslib/layers/FourierCorrelation.py",
+      "sha256": "cea1095b3a94764f240e6ac67280d6ea7fac9f5ef54de137cd1f5e5adab1305f",
+      "bytes": 7523
+    },
+    {
+      "path": "vendor/tslib/layers/MambaBlock.py",
+      "sha256": "cbcbbd6cbb83366e40ffe5926da16b4ca0aa11b6649e2259750994b60527a390",
+      "bytes": 18260
+    },
+    {
+      "path": "vendor/tslib/layers/MSGBlock.py",
+      "sha256": "01d3d446a214c33062ba098f251a1e49ed8a342dd4372e973a0a8c0dde5cd8c0",
+      "bytes": 9954
+    },
+    {
+      "path": "vendor/tslib/layers/MultiWaveletCorrelation.py",
+      "sha256": "cf0b8faf45a1b7fab4a3c1c521623c0762e2f9d7375b20ba9a9acd2142747342",
+      "bytes": 23039
+    },
+    {
+      "path": "vendor/tslib/layers/Pyraformer_EncDec.py",
+      "sha256": "ab92396677a9ad2e49c7bf171e15c96108d388b8898d29ee520d18dfe0bd5306",
+      "bytes": 7433
+    },
+    {
+      "path": "vendor/tslib/layers/SelfAttention_Family.py",
+      "sha256": "6f6592aed0753e342fc04c01db70528c2eb191eeb067cd5fd4c8d348fddcb794",
+      "bytes": 12001
+    },
+    {
+      "path": "vendor/tslib/layers/StandardNorm.py",
+      "sha256": "3f690dc5fc0e395d4f1ffe6396717548d18bd04f4518258308bbe5f392703f5f",
+      "bytes": 2184
+    },
+    {
+      "path": "vendor/tslib/layers/TimeFilter_layers.py",
+      "sha256": "3441713bdb54de1153afe3d5e746de4e251c07b545492180a073c4f275df6b9f",
+      "bytes": 10046
+    },
+    {
+      "path": "vendor/tslib/layers/Transformer_EncDec.py",
+      "sha256": "7b26f4459735c341f161011f6bc24b9deb8ecc3bcf61e4f15431998272a44fb4",
+      "bytes": 4929
+    },
+    {
+      "path": "vendor/tslib/LICENSE",
+      "sha256": "8a6caa178ea3f33ebff5d7bb5558628cf5b423305dc30d3630f86564c7db94a2",
+      "bytes": 1084
+    },
+    {
+      "path": "vendor/tslib/models/__init__.py",
+      "sha256": "d97d758fc2ef4da5eb24a20e940538bb5b8f6ed81d9b2e6ecaf20a2b178daee2",
+      "bytes": 5
+    },
+    {
+      "path": "vendor/tslib/models/Autoformer.py",
+      "sha256": "e7d31b5071e4412bcece030f343450d2ca93932988ee912b95058d9955473810",
+      "bytes": 6815
+    },
+    {
+      "path": "vendor/tslib/models/Chronos.py",
+      "sha256": "7386167682450aeaf40fd6faaf07444f4bc95348d7a59c4793451c9815e70965",
+      "bytes": 1420
+    },
+    {
+      "path": "vendor/tslib/models/Chronos2.py",
+      "sha256": "093198a31974e720e72c1f438640334dabc5a8cfc88546e8b02e4ade85d80e5a",
+      "bytes": 1759
+    },
+    {
+      "path": "vendor/tslib/models/Crossformer.py",
+      "sha256": "f5892f70eb3fc320f69fa0a9b2019b68537cc5a5e5aa2ec544c15127b19e36f0",
+      "bytes": 6363
+    },
+    {
+      "path": "vendor/tslib/models/DLinear.py",
+      "sha256": "e03acaf97e70c85ea6bda6776b3a62550f84470afa7bc53dffccb6121626e7eb",
+      "bytes": 4501
+    },
+    {
+      "path": "vendor/tslib/models/ETSformer.py",
+      "sha256": "3cd25f1ea4dc18e926720b2976d86820363dcc5db0436e490f2b794630086035",
+      "bytes": 4599
+    },
+    {
+      "path": "vendor/tslib/models/FEDformer.py",
+      "sha256": "2d9051784362cf848f061cfec9038aff8ec2bb3047abdffe47f0ad0abdf88e62",
+      "bytes": 8587
+    },
+    {
+      "path": "vendor/tslib/models/FiLM.py",
+      "sha256": "866054afc57411ebaf47c270566c05302b19acf3a3663b0b86e9153e386d2dc6",
+      "bytes": 11567
+    },
+    {
+      "path": "vendor/tslib/models/FreTS.py",
+      "sha256": "2b6c9e0cd3d4f42bc74736343147812db94f029f1a8b13b098b9841705de5c18",
+      "bytes": 4630
+    },
+    {
+      "path": "vendor/tslib/models/Informer.py",
+      "sha256": "95dee85f6c0642dbfeee7736d526f9e20a54b5f5871a7085343b6a8be3cf56d2",
+      "bytes": 6395
+    },
+    {
+      "path": "vendor/tslib/models/iTransformer.py",
+      "sha256": "7fdc721d041b0f8f63be8fa794ecd68422fd958c7c8d449026320fd9f368788e",
+      "bytes": 5735
+    },
+    {
+      "path": "vendor/tslib/models/KANAD.py",
+      "sha256": "8503dc8fffb3c1c5212c60da9d645c28ecf590ef5846d37dea9bcc6568f7e95d",
+      "bytes": 3832
+    },
+    {
+      "path": "vendor/tslib/models/Koopa.py",
+      "sha256": "056464ecec26ff00893f8ff4c372992c1c46c0563990d7c0593a945b8d7c4402",
+      "bytes": 13374
+    },
+    {
+      "path": "vendor/tslib/models/LightTS.py",
+      "sha256": "1de1583c4ee0bbfa0764fa9b158f09ac8bcd7ddf7f2d9f1b58ab1a03a7d13989",
+      "bytes": 5622
+    },
+    {
+      "path": "vendor/tslib/models/Mamba.py",
+      "sha256": "de6c2ce01371e8cc7b0524df8caffaf299b58d093c4096661ad4cc66d216595e",
+      "bytes": 1590
+    },
+    {
+      "path": "vendor/tslib/models/MambaSimple.py",
+      "sha256": "0d8251e73c4b74eff403bf913bb4277bbc9427f69a419767121dc7ea0d0f6a95",
+      "bytes": 5501
+    },
+    {
+      "path": "vendor/tslib/models/MambaSingleLayer.py",
+      "sha256": "32db2b9a7081c9bec00a0c882d94ca0959cef05d6a96a0b4ccbbf9b2499cd4bb",
+      "bytes": 5326
+    },
+    {
+      "path": "vendor/tslib/models/MICN.py",
+      "sha256": "a0cb59254e850bfd1d94114a73126c290e6baf2ea700132ede8aade680bbedbf",
+      "bytes": 9946
+    },
+    {
+      "path": "vendor/tslib/models/Moirai.py",
+      "sha256": "f387c8ff2f06d37893d0c72bf93cf509e68e270c51da7887dbefbda02879ab41",
+      "bytes": 1791
+    },
+    {
+      "path": "vendor/tslib/models/MSGNet.py",
+      "sha256": "e6f8f3fbd4e0bc9d77c78e2409969c4fe4b2fc6560e7c1f5cced2a809d8e9e59",
+      "bytes": 9560
+    },
+    {
+      "path": "vendor/tslib/models/MultiPatchFormer.py",
+      "sha256": "e8603a9d8b1e796a822171399a057bd3945cf51b38fb1661d91fe60ad79313b3",
+      "bytes": 12067
+    },
+    {
+      "path": "vendor/tslib/models/Nonstationary_Transformer.py",
+      "sha256": "8c12c8bddbfe7414a87efee19f019079e62e9ad7cc4e7627cb25d2886ae60c33",
+      "bytes": 10251
+    },
+    {
+      "path": "vendor/tslib/models/PatchTST.py",
+      "sha256": "29835d4fedddd3cbee26cc60d6a54c04513f5a9ca32e4a0d08de2c9e059084e5",
+      "bytes": 9071
+    },
+    {
+      "path": "vendor/tslib/models/PAttn.py",
+      "sha256": "04a11e5b15afd261e005982c76424b219303114a3b32bfe3da00d1df862dae88",
+      "bytes": 2500
+    },
+    {
+      "path": "vendor/tslib/models/Pyraformer.py",
+      "sha256": "6ec9a21d56fa47b81b706b05b7caf76f440daf3cb4ffe2dca9d2f149b02dd877",
+      "bytes": 4215
+    },
+    {
+      "path": "vendor/tslib/models/Reformer.py",
+      "sha256": "d559a572111615a3a6c0b2ed25e29a2678997a6406d44814aba97b24c1c63517",
+      "bytes": 5090
+    },
+    {
+      "path": "vendor/tslib/models/SCINet.py",
+      "sha256": "06dcae9cfce5d3dc09e8db9b537479421848ee678ffbd1d3ca0b5c335a1baf25",
+      "bytes": 7357
+    },
+    {
+      "path": "vendor/tslib/models/SegRNN.py",
+      "sha256": "764d4ad950ee65162c70746248754942cfb4ba661162d515caab0a4eedd12252",
+      "bytes": 4215
+    },
+    {
+      "path": "vendor/tslib/models/Sundial.py",
+      "sha256": "4acd97dbda41f644cda908c98178b9995b1853d707aba22dc21bbd9e56c74ae5",
+      "bytes": 1309
+    },
+    {
+      "path": "vendor/tslib/models/TemporalFusionTransformer.py",
+      "sha256": "f1b348f304bcf8954059eaa356a2b2bafd73c2278e85bd62be5f794e73e59388",
+      "bytes": 14027
+    },
+    {
+      "path": "vendor/tslib/models/TiDE.py",
+      "sha256": "4ab07dec4ae85f8b7c3062ff7d2fec00be342968d41cf09e48d599d8e40f6143",
+      "bytes": 7222
+    },
+    {
+      "path": "vendor/tslib/models/TimeFilter.py",
+      "sha256": "6cbce92f112a9907fe6117ea23527bf1864c0ea00721a812d786e86e0a1b0724",
+      "bytes": 6769
+    },
+    {
+      "path": "vendor/tslib/models/TimeMixer.py",
+      "sha256": "bbf378cab03d16d3e7ae907f7b3cefbac89ae1504e036270578d5d496ffbd133",
+      "bytes": 20056
+    },
+    {
+      "path": "vendor/tslib/models/TimeMoE.py",
+      "sha256": "fc13c8165d8687cdd720a9ce17704037f6576cbe578c8f2e291f44e8bc8f6734",
+      "bytes": 1750
+    },
+    {
+      "path": "vendor/tslib/models/TimesFM.py",
+      "sha256": "6407e32aacc7d67411e23fe9de270ce7d1af0e8c61f8e965942e16a75cffcc8b",
+      "bytes": 1756
+    },
+    {
+      "path": "vendor/tslib/models/TimesNet.py",
+      "sha256": "f64c4bed1fd7347090044a0163bd4209c9f9ec1c1b19ceff47842df36b64bba7",
+      "bytes": 8735
+    },
+    {
+      "path": "vendor/tslib/models/TimeXer.py",
+      "sha256": "b334d7869544d0a5de7a35501d0342d7bd0be4ebda06ccc045855a42819728c0",
+      "bytes": 9019
+    },
+    {
+      "path": "vendor/tslib/models/TiRex.py",
+      "sha256": "87d3682830ddc1e2e8cfcc3673e275ec450789ac133ae4bfb221910184dcec1e",
+      "bytes": 1221
+    },
+    {
+      "path": "vendor/tslib/models/Transformer.py",
+      "sha256": "46ded6c516fd03951bce0a82c3f4245f0247efd01fb5bde775145cfbb6d8435d",
+      "bytes": 5561
+    },
+    {
+      "path": "vendor/tslib/models/TSMixer.py",
+      "sha256": "a82942ddc22cba59f4161f3ea480eb0e474eba6f0ab2d13f2bd949f100b2ce87",
+      "bytes": 1814
+    },
+    {
+      "path": "vendor/tslib/models/WPMixer.py",
+      "sha256": "5b549f5454864d19a230747f0060dc00732fb0de6b50a359173e0d7a6b04ce8f",
+      "bytes": 13212
+    },
+    {
+      "path": "vendor/tslib/README.md",
+      "sha256": "2d03e4917e41917105ed647c5ea7537e1394f88b0af190e05715457b55dc5be6",
+      "bytes": 30580
+    },
+    {
+      "path": "vendor/tslib/requirements.txt",
+      "sha256": "1467f08eca3f4b749addf69042955eeb547dfb13a8a569e7e881b545c696df9f",
+      "bytes": 502
+    },
+    {
+      "path": "vendor/tslib/run.py",
+      "sha256": "db6dfa215520ba193fe7095380f9005949a958efa9526975410cb5d97afe3fc4",
+      "bytes": 16328
+    },
+    {
+      "path": "vendor/tslib/SOURCE.json",
+      "sha256": "94dff4feacbdbd4711aba1294fbf272ed3268362dc760ef2a80b91b77dcefd74",
+      "bytes": 2352
+    },
+    {
+      "path": "vendor/tslib/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "vendor/tslib/utils/ADFtest.py",
+      "sha256": "fcc30ead66778d2f70409740f8d54287fbeb032cd080695879a370722f7a4b26",
+      "bytes": 2490
+    },
+    {
+      "path": "vendor/tslib/utils/augmentation.py",
+      "sha256": "17bac803a96fb6c98d0822052c1edc9f6bc72ae37eec5aa859e9e2918d537b69",
+      "bytes": 19234
+    },
+    {
+      "path": "vendor/tslib/utils/dtw.py",
+      "sha256": "a12084ab35783e4c09ddfadb54b0253f1fa8a3499abd88c772f93f499bcffa2a",
+      "bytes": 7197
+    },
+    {
+      "path": "vendor/tslib/utils/dtw_metric.py",
+      "sha256": "308c56507b01a945f38796f2f9b4bb104adc213ab574aa2693f93635c9748889",
+      "bytes": 5817
+    },
+    {
+      "path": "vendor/tslib/utils/losses.py",
+      "sha256": "d7f924f9abdf9dbbf097b60329a25ad727b163111014954ebf5856370a1aa116",
+      "bytes": 3459
+    },
+    {
+      "path": "vendor/tslib/utils/m4_summary.py",
+      "sha256": "bfc7ba06736c3919b4542b0e68a15280642d80989a7f837132121136e8a4e8a7",
+      "bytes": 6174
+    },
+    {
+      "path": "vendor/tslib/utils/masking.py",
+      "sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "bytes": 832
+    },
+    {
+      "path": "vendor/tslib/utils/metrics.py",
+      "sha256": "0a565c3f64d7cd29d9a87dee0c22d48f4a6a329476f893458cc18a35fa46a5df",
+      "bytes": 866
+    },
+    {
+      "path": "vendor/tslib/utils/print_args.py",
+      "sha256": "423454ec7e2cefe6d24a458903f6080e866efdbe78c0ac2481b2cf32d44c558a",
+      "bytes": 3141
+    },
+    {
+      "path": "vendor/tslib/utils/timefeatures.py",
+      "sha256": "319b3da2ef15ccae95162b1b4f4a9a0b0da63fa0062a7f6006a06dd567258d85",
+      "bytes": 4369
+    },
+    {
+      "path": "vendor/tslib/utils/tools.py",
+      "sha256": "f47237f29d2a27570ef11871d9acdc51d1742b3bd1d8d09e5226e4140f4ad024",
+      "bytes": 3694
+    }
+  ]
+}

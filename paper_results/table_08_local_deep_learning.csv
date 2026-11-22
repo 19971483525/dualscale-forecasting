@@ -1,0 +1,8 @@
+model,mae_gwh_mean,mae_gwh_sd,rmse_gwh_mean,rmse_gwh_sd,mape_pct_mean,mape_pct_sd
+Legacy_MG-ASTL,17.643,0.699,23.083,0.629,2.517,0.097
+Legacy_TL-STLF,16.627,1.372,22.683,1.592,2.411,0.194
+Legacy_LoadFormer,16.369,1.120,21.991,0.845,2.355,0.149
+Legacy_STGNN-Load,18.562,1.366,23.646,1.382,2.641,0.186
+Legacy_ASTGCN-Load,17.758,0.282,23.226,0.222,2.535,0.038
+Legacy_GAT-LoadMixer,17.580,1.180,23.771,1.454,2.513,0.160
+Ours,16.314,0.618,22.467,0.714,2.324,0.085

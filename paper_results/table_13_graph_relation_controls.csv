@@ -1,0 +1,7 @@
+variant,parameters,mae_gwh_mean,mae_gwh_sd,rmse_gwh_mean,rmse_gwh_sd
+relation_full,591209,15.873,0.144,22.051,0.190
+relation_static,591209,15.477,0.661,21.448,0.465
+relation_dynamic,591209,16.119,0.514,22.026,0.640
+relation_no_topk,591209,15.574,0.339,21.677,0.769
+relation_attention,609641,16.027,0.259,22.439,0.742
+relation_mlp,597418,17.445,2.276,23.533,1.881

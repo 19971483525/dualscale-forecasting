@@ -1,0 +1,162 @@
+{
+  "stage": "FROZEN",
+  "protocol_id": "Hubei_aligned_history_v2",
+  "created": "2026-11-20T07:30:55.664432+00:00",
+  "history_days": 42,
+  "forecast_horizon_days": 1,
+  "device": "cuda",
+  "seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    3407
+  ],
+  "graph_sensitivity_seeds": [
+    42,
+    123,
+    3407
+  ],
+  "perturbation_seeds": [
+    101,
+    202,
+    303
+  ],
+  "main_dates": {
+    "train": [
+      "2024-02-12",
+      "2024-11-26"
+    ],
+    "val": [
+      "2024-11-27",
+      "2025-01-27"
+    ],
+    "test": [
+      "2025-01-28",
+      "2025-03-31"
+    ]
+  },
+  "training": {
+    "epochs": 120,
+    "batch_size": 16,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "patience": 25,
+    "min_epochs": 30,
+    "aux_weight": 0.2,
+    "industry_aux_weight": 0.15
+  },
+  "hpo": [
+    {
+      "hidden_dim": 96,
+      "lr": 0.0005,
+      "dropout": 0.04,
+      "depth": 1,
+      "patch_len": 12
+    },
+    {
+      "hidden_dim": 96,
+      "lr": 0.001,
+      "dropout": 0.04,
+      "depth": 1,
+      "patch_len": 12
+    },
+    {
+      "hidden_dim": 96,
+      "lr": 0.0002,
+      "dropout": 0.1,
+      "depth": 1,
+      "patch_len": 12
+    }
+  ],
+  "models": [
+    "Ours",
+    "PatchTST",
+    "TSMixer",
+    "TimesNet",
+    "iTransformer",
+    "TimeMixer",
+    "TimeXer",
+    "ASTGCN"
+  ],
+  "seasonal_models": [
+    "Ours",
+    "iTransformer",
+    "TSMixer"
+  ],
+  "rolling_folds": {
+    "summer": {
+      "train": [
+        "2024-02-12",
+        "2024-05-31"
+      ],
+      "val": [
+        "2024-06-01",
+        "2024-06-30"
+      ],
+      "test": [
+        "2024-07-01",
+        "2024-07-30"
+      ]
+    },
+    "autumn": {
+      "train": [
+        "2024-02-12",
+        "2024-08-31"
+      ],
+      "val": [
+        "2024-09-01",
+        "2024-09-30"
+      ],
+      "test": [
+        "2024-10-01",
+        "2024-10-30"
+      ]
+    },
+    "winter": {
+      "train": [
+        "2024-02-12",
+        "2024-10-31"
+      ],
+      "val": [
+        "2024-11-01",
+        "2024-11-30"
+      ],
+      "test": [
+        "2024-12-01",
+        "2024-12-30"
+      ]
+    },
+    "spring": {
+      "train": [
+        "2024-02-12",
+        "2025-01-31"
+      ],
+      "val": [
+        "2025-02-01",
+        "2025-02-28"
+      ],
+      "test": [
+        "2025-03-01",
+        "2025-03-30"
+      ]
+    }
+  },
+  "data_sha256": "3af736dd285a9633199e6d9589399872cca60bd25dcdd41841985292897bba76",
+  "unit": "GWh",
+  "numerical_source_sha256": {
+    "engine.py": "1b5308cb45a64a62f50b114d3632a14b3706a06a8ad2caa9cf2e4fdd764f8efd",
+    "models.py": "b315a5c482c0ca860e075574998b5e0f53fac0d6ca34025051453162993606fa",
+    "units.py": "27bdf6b81468c51c3c34f849c8ac0de45203998f36091f3cfa04ca67c4c0467d",
+    "legacy/model.py": "ead817f287c584585c2342cd2eefb2015ae61dff84350acf7f94bb2009c939b3",
+    "legacy/data.py": "f3cbd75feb91ff2f182c4eeaac7e4d82af8e7923282a3132637e95ddafdb63a0",
+    "legacy/trainer.py": "b078ba9691a5f6414233d4f0f2982767e4a56b6ec397623c3b103901b3346d80"
+  },
+  "window_selection": "Lowest five-seed mean validation MAE among 28,30,34,38,42. Prior test inspection disclosed.",
+  "hpo_selection": "Three validation configurations per neural model, seed42; fix selected options before five-seed tests. Same budget and 120-epoch cap. No test-based selection.",
+  "rolling_selection": "Independent three-trial validation search in every fold; do not reuse future-fold normalization or selected hyperparameters.",
+  "source_scope": "Original checkpoint-compatible full-model reconstruction; exact historical source/initial RNG state were not archived.",
+  "disclosure": "Exploratory on already inspected Hubei test dates; no new independent region or holdout; retain all seeds and failures.",
+  "frozen": "2026-11-20T07:33:38.461143+00:00",
+  "experiment_schedule_sha256": "886e1ff780f52d8e60394d6393ab3979a64e7fba4ecfcbcd9f3eab35ad6fef3c"
+}

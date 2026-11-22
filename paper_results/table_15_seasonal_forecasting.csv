@@ -1,0 +1,4 @@
+model,summer_mae_gwh_mean,summer_mae_gwh_sd,autumn_mae_gwh_mean,autumn_mae_gwh_sd,winter_mae_gwh_mean,winter_mae_gwh_sd,spring_mae_gwh_mean,spring_mae_gwh_sd
+Ours,39.546,2.784,27.020,4.716,15.792,7.267,13.377,0.644
+iTransformer,45.569,6.369,24.009,4.836,12.544,1.638,14.483,1.115
+TSMixer,44.966,13.933,18.925,2.247,15.097,4.416,14.245,2.596

@@ -1,0 +1,8 @@
+condition,n_dates,complete_mae_gwh_mean,complete_mae_gwh_sd,static_mae_gwh_mean,static_mae_gwh_sd
+all_test_dates,63,15.873,0.144,15.477,0.661
+ordinary_workday,40,15.795,0.740,15.926,0.833
+weekend,15,10.599,0.816,9.024,2.107
+low_temperature,25,17.229,1.165,18.087,0.913
+spring_festival,8,26.154,1.474,25.331,1.333
+spring_transition,7,22.137,3.499,23.636,2.082
+large_day_change,2,68.087,1.913,66.692,5.723

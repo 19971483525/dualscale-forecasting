@@ -1,0 +1,10 @@
+model,mae_gwh,rmse_gwh,mape_pct
+Last-day Naive,18.634,24.021,2.647
+Last-week Seasonal Naive,50.159,70.574,7.281
+ARIMA,17.908,23.839,2.526
+Exponential Smoothing,19.087,26.372,2.729
+Linear Regression,58.984,70.935,8.126
+Ridge Regression,16.538,23.107,2.360
+XGBoost,16.906,22.156,2.415
+LightGBM,16.349,22.177,2.359
+Ours,16.314,22.467,2.324
